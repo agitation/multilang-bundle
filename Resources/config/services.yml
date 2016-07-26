@@ -1,0 +1,9 @@
+services:
+    agit.mlang.validator:
+        class: Agit\MultilangBundle\EntityConstraint\MultilangValidator
+        arguments: [ @agit.validation ]
+        tags: [{ name: validator.constraint_validator, alias: multilang }]
+
+    agit.mlang.twig:
+        class: Agit\MultilangBundle\Service\MultilangTwigExtension
+        tags: [{ name: twig.extension }]
