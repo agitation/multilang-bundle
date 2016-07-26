@@ -4,9 +4,12 @@
         <textarea class="form-control"></textarea>
 
         <span class="langs">
-            <a class="lang" tabindex="1" data-locale="de_DE"><i class="fa fa-caret-down"></i><span></span></a>
-            <a class="lang" tabindex="2" data-locale="en_GB"><i class="fa fa-caret-down"></i><span></span></a>
-            <a class="lang" tabindex="3" data-locale="fr_FR"><i class="fa fa-caret-down"></i><span></span></a>
+            {% for idx, loc in getActiveLocales() %}
+                <a class="lang" tabindex="1000{{ idx }}" data-locale="{{ loc }}">
+                    <i class="fa fa-caret-down"></i>
+                    <span></span>
+                </a>
+            {% endfor %}
         </span>
     </span>
 </template>
