@@ -36,7 +36,7 @@ class MultilangStringValidator extends AbstractValidator implements ServiceAware
         foreach ($parts as $lang => $string)
         {
             if (!in_array($lang, $availableLanguages))
-            throw new InvalidValueException(sprintf(Translate::t("`%s` is not a valid language language."), $lang));
+            throw new InvalidValueException(sprintf(Translate::t("`%s` is not a valid language."), $lang));
 
             if ($string || $minLength)
                 $this->getValidator("string")->validate($string, $minLength, $maxLength, $allowLinebreaks);
