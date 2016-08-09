@@ -85,7 +85,7 @@ ag.ns("ag.mlang.field");
             });
         };
 
-    multilangField.prototype = Object.create(ag.ui.field.Field.prototype);
+    multilangField.prototype = Object.create(ag.ui.field.ComplexField.prototype);
 
     multilangField.prototype.setValue = function(value)
     {
