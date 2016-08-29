@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"nplurals=2; plural=(n != 1);\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
+#: @AgitMultilangBundle/Plugin/MultilangStringValidator.php:34
 #: @AgitMultilangBundle/Plugin/MultilangStringValidator.php:34
 msgid "The field must be translated into at least one language."
 msgstr ""
 
+#: @AgitMultilangBundle/Plugin/MultilangStringValidator.php:39
 #: @AgitMultilangBundle/Plugin/MultilangStringValidator.php:39
 #, php-format
 msgid "`%s` is not a valid language."
