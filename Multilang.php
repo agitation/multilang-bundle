@@ -2,7 +2,7 @@
 
 namespace Agit\MultilangBundle;
 
-use Agit\IntlBundle\Translate;
+use Agit\BaseBundle\Tool\Translate;
 
 class Multilang
 {

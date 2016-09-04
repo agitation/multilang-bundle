@@ -6,7 +6,7 @@ use Agit\ValidationBundle\Exception\InvalidValueException;
 use Agit\PluggableBundle\Strategy\Object\ObjectPlugin;
 use Agit\PluggableBundle\Strategy\ServiceAwarePluginInterface;
 use Agit\PluggableBundle\Strategy\ServiceAwarePluginTrait;
-use Agit\IntlBundle\Translate;
+use Agit\BaseBundle\Tool\Translate;
 use Agit\ValidationBundle\Plugin\AbstractValidator;
 use Agit\MultilangBundle\Multilang;
 

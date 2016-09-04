@@ -8,8 +8,7 @@
         "agitation/base-bundle": "dev-master",
         "agitation/pluggable-bundle": "dev-master",
         "agitation/validation-bundle": "dev-master",
-        "agitation/api-bundle": "dev-master",
-        "agitation/intl-bundle": "dev-master"
+        "agitation/api-bundle": "dev-master"
     },
     "autoload": {
         "psr-4": {
