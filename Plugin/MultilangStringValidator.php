@@ -2,12 +2,13 @@
 
 namespace Agit\MultilangBundle\Plugin;
 
-use Agit\BaseBundle\Exception\InvalidValueException;
 use Agit\BaseBundle\Service\LocaleService;
 use Agit\BaseBundle\Tool\Translate;
-use Agit\BaseBundle\Validation\AbstractValidator;
-use Agit\BaseBundle\Validation\RegexValidator;
 use Agit\MultilangBundle\Multilang;
+use Agit\ValidationBundle\Exception\InvalidValueException;
+use Agit\ValidationBundle\Validator\AbstractValidator;
+use Agit\ValidationBundle\Validator\RegexValidator;
+use Agit\ValidationBundle\Validator\StringValidator;
 
 
 class MultilangStringValidator extends AbstractValidator
@@ -16,10 +17,13 @@ class MultilangStringValidator extends AbstractValidator
 
     private $regexValidator;
 
-    public function __construct(LocaleService $localeService, RegexValidator $regexValidator)
+    private $stringValidator;
+
+    public function __construct(LocaleService $localeService, StringValidator $stringValidator, RegexValidator $regexValidator)
     {
         $this->localeService = $localeService;
         $this->regexValidator = $regexValidator;
+        $this->stringValidator = $stringValidator;
     }
 
     public function validate($value, $minLength = null, $maxLength = null, $allowLinebreaks = false)
@@ -44,7 +48,7 @@ class MultilangStringValidator extends AbstractValidator
             throw new InvalidValueException(sprintf(Translate::t("`%s` is not a valid language."), $lang));
 
             if ($string || $minLength)
-                $this->getValidator("string")->validate($string, $minLength, $maxLength, $allowLinebreaks);
+                $this->stringValidator->validate($string, $minLength, $maxLength, $allowLinebreaks);
         }
     }
 }
