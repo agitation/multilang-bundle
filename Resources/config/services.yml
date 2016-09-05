@@ -4,6 +4,12 @@ services:
         arguments: [ @agit.validation ]
         tags: [{ name: validator.constraint_validator, alias: multilang }]
 
+    agit.validator.multilang:
+        parent: agit.validator
+        class: Agit\MultilangBundle\Plugin\MultilangStringValidator
+        arguments: [ "@agit.intl.locale", "@agit.validator.regex" ]
+        tags: [{ name: agit.validator, id: multilang }]
+
     agit.mlang.twig:
         class: Agit\MultilangBundle\Service\MultilangTwigExtension
         tags: [{ name: twig.extension }]

@@ -6,7 +6,7 @@ use Exception;
 use Agit\BaseBundle\Tool\Translate;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
-use Agit\BaseBundle\Service\ValidationService;
+use Agit\ValidationBundle\ValidationService;
 
 class MultilangValidator extends ConstraintValidator
 {

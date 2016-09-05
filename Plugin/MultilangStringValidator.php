@@ -3,29 +3,34 @@
 namespace Agit\MultilangBundle\Plugin;
 
 use Agit\BaseBundle\Exception\InvalidValueException;
-use Agit\BaseBundle\Pluggable\Object\ObjectPlugin;
-use Agit\BaseBundle\Pluggable\ServiceAwarePluginInterface;
-use Agit\BaseBundle\Pluggable\ServiceAwarePluginTrait;
+use Agit\BaseBundle\Service\LocaleService;
 use Agit\BaseBundle\Tool\Translate;
-use Agit\BaseBundle\Plugin\Validator\AbstractValidator;
+use Agit\BaseBundle\Validation\AbstractValidator;
+use Agit\BaseBundle\Validation\RegexValidator;
 use Agit\MultilangBundle\Multilang;
 
-/**
- * @ObjectPlugin(tag="agit.validation", id="multilang", depends={"@agit.intl.locale"})
- */
-class MultilangStringValidator extends AbstractValidator implements ServiceAwarePluginInterface
+
+class MultilangStringValidator extends AbstractValidator
 {
-    use ServiceAwarePluginTrait;
+    private $localeService;
+
+    private $regexValidator;
+
+    public function __construct(LocaleService $localeService, RegexValidator $regexValidator)
+    {
+        $this->localeService = $localeService;
+        $this->regexValidator = $regexValidator;
+    }
 
     public function validate($value, $minLength = null, $maxLength = null, $allowLinebreaks = false)
     {
         // make sure there are no untranslated parts at the beginning, unless the string is entirely empty
         if ($value !== "")
-            $this->getValidator("regex")->validate($value, "|^\[:[a-z]{2}\]|");
+            $this->regexValidator->validate($value, "|^\[:[a-z]{2}\]|");
 
         $availableLanguages = array_map(
             function($locale){ return substr($locale, 0, 2); },
-            $this->getService("agit.intl.locale")->getAvailableLocales()
+            $this->localeService->getAvailableLocales()
         );
 
         $parts = Multilang::multilangStringToArray($value);
