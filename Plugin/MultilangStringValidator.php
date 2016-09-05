@@ -2,12 +2,12 @@
 
 namespace Agit\MultilangBundle\Plugin;
 
-use Agit\ValidationBundle\Exception\InvalidValueException;
+use Agit\BaseBundle\Exception\InvalidValueException;
 use Agit\BaseBundle\Pluggable\Object\ObjectPlugin;
 use Agit\BaseBundle\Pluggable\ServiceAwarePluginInterface;
 use Agit\BaseBundle\Pluggable\ServiceAwarePluginTrait;
 use Agit\BaseBundle\Tool\Translate;
-use Agit\ValidationBundle\Plugin\AbstractValidator;
+use Agit\BaseBundle\Plugin\Validator\AbstractValidator;
 use Agit\MultilangBundle\Multilang;
 
 /**
