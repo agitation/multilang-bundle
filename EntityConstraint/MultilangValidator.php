@@ -3,7 +3,7 @@
 namespace Agit\MultilangBundle\EntityConstraint;
 
 use Exception;
-use Agit\BaseBundle\Tool\Translate;
+use Agit\IntlBundle\Tool\Translate;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Agit\ValidationBundle\ValidationService;

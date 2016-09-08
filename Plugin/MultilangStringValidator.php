@@ -2,8 +2,8 @@
 
 namespace Agit\MultilangBundle\Plugin;
 
-use Agit\BaseBundle\Service\LocaleService;
-use Agit\BaseBundle\Tool\Translate;
+use Agit\IntlBundle\Service\LocaleService;
+use Agit\IntlBundle\Tool\Translate;
 use Agit\MultilangBundle\Multilang;
 use Agit\ValidationBundle\Exception\InvalidValueException;
 use Agit\ValidationBundle\Validator\AbstractValidator;
