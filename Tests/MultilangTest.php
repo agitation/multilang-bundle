@@ -1,9 +1,16 @@
 <?php
 
+/*
+ * @package    agitation/multilang-bundle
+ * @link       http://github.com/agitation/multilang-bundle
+ * @author     Alexander Günsche
+ * @license    http://opensource.org/licenses/MIT
+ */
+
 namespace Agit\MultilangBundle\Tests;
 
-use PHPUnit_Framework_TestCase;
 use Agit\MultilangBundle\Multilang;
+use PHPUnit_Framework_TestCase;
 
 class MultilangTest extends PHPUnit_Framework_TestCase
 {
@@ -12,8 +19,7 @@ class MultilangTest extends PHPUnit_Framework_TestCase
      */
     public function testMultilangStringToObject($string, $expected)
     {
-        $this->assertEquals($expected, Multilang::multilangStringToArray($string));
-
+        $this->assertSame($expected, Multilang::multilangStringToArray($string));
     }
 
     /**
@@ -21,14 +27,14 @@ class MultilangTest extends PHPUnit_Framework_TestCase
      */
     public function testU($string, $locale, $expected)
     {
-        $this->assertEquals($expected, Multilang::u($string, $locale));
+        $this->assertSame($expected, Multilang::u($string, $locale));
     }
 
     public function providerTestMultilangStringToArray()
     {
         return [
-            ["[:de]irgendwas[:en]something", ["de" => "irgendwas", "en"=>"something"]],
-            ["[:de][:en]something", ["de" => "", "en"=>"something"]],
+            ["[:de]irgendwas[:en]something", ["de" => "irgendwas", "en" => "something"]],
+            ["[:de][:en]something", ["de" => "", "en" => "something"]],
             ["[de]irgendwas[:en]something", []],
             ["[deirgendwas[:en]something", []],
             ["[:deirgendwas[:en]something", []],

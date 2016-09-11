@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * @package    agitation/multilang-bundle
+ * @link       http://github.com/agitation/multilang-bundle
+ * @author     Alexander Günsche
+ * @license    http://opensource.org/licenses/MIT
+ */
+
 namespace Agit\MultilangBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;

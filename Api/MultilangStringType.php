@@ -1,9 +1,9 @@
 <?php
-/**
- * @package    agitation/api
- * @link       http://github.com/agitation/AgitApiBundle
- * @author     Alex Günsche <http://www.agitsol.com/>
- * @copyright  2012-2015 AGITsol GmbH
+
+/*
+ * @package    agitation/multilang-bundle
+ * @link       http://github.com/agitation/multilang-bundle
+ * @author     Alexander Günsche
  * @license    http://opensource.org/licenses/MIT
  */
 
@@ -20,8 +20,7 @@ class MultilangStringType extends StringType
     {
         $this->init($value);
 
-        if ($this->mustCheck())
-        {
+        if ($this->mustCheck()) {
             static::$_ValidationService->validate(
                 "multilang",
                 $value,

@@ -1,9 +1,16 @@
 <?php
 
+/*
+ * @package    agitation/multilang-bundle
+ * @link       http://github.com/agitation/multilang-bundle
+ * @author     Alexander Günsche
+ * @license    http://opensource.org/licenses/MIT
+ */
+
 namespace Agit\MultilangBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use Agit\MultilangBundle\EntityConstraint\Multilang;
+use Doctrine\ORM\Mapping as ORM;
 
 trait MultilangDescriptionAwareTrait
 {
@@ -14,19 +21,21 @@ trait MultilangDescriptionAwareTrait
     private $description;
 
     /**
-     * Set description
+     * Set description.
      *
      * @param string $description
+     *
      * @return $this
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
     /**
-     * Get description
+     * Get description.
      *
      * @return string
      */

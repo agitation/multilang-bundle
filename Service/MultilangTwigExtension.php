@@ -1,10 +1,17 @@
 <?php
 
+/*
+ * @package    agitation/multilang-bundle
+ * @link       http://github.com/agitation/multilang-bundle
+ * @author     Alexander Günsche
+ * @license    http://opensource.org/licenses/MIT
+ */
+
 namespace Agit\MultilangBundle\Service;
 
+use Agit\MultilangBundle\Multilang;
 use Twig_Extension;
 use Twig_Function_Method;
-use Agit\MultilangBundle\Multilang;
 
 class MultilangTwigExtension extends Twig_Extension
 {
@@ -13,7 +20,7 @@ class MultilangTwigExtension extends Twig_Extension
      */
     public function getFunctions()
     {
-        return [ "u"  => new Twig_Function_Method($this, "u",  ["is_safe" => ["all"]]) ];
+        return ["u"  => new Twig_Function_Method($this, "u",  ["is_safe" => ["all"]])];
     }
 
     public function getName()

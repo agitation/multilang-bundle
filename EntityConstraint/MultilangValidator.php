@@ -1,12 +1,17 @@
 <?php
 
+/*
+ * @package    agitation/multilang-bundle
+ * @link       http://github.com/agitation/multilang-bundle
+ * @author     Alexander Günsche
+ * @license    http://opensource.org/licenses/MIT
+ */
+
 namespace Agit\MultilangBundle\EntityConstraint;
 
-use Exception;
-use Agit\IntlBundle\Tool\Translate;
+use Agit\ValidationBundle\ValidationService;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
-use Agit\ValidationBundle\ValidationService;
 
 class MultilangValidator extends ConstraintValidator
 {

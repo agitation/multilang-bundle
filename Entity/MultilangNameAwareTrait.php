@@ -1,9 +1,16 @@
 <?php
 
+/*
+ * @package    agitation/multilang-bundle
+ * @link       http://github.com/agitation/multilang-bundle
+ * @author     Alexander Günsche
+ * @license    http://opensource.org/licenses/MIT
+ */
+
 namespace Agit\MultilangBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use Agit\MultilangBundle\EntityConstraint\Multilang;
+use Doctrine\ORM\Mapping as ORM;
 
 trait MultilangNameAwareTrait
 {
@@ -14,19 +21,21 @@ trait MultilangNameAwareTrait
     private $name;
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
+     *
      * @return $this
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
     /**
-     * Get name
+     * Get name.
      *
      * @return string
      */
