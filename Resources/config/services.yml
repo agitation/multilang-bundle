@@ -6,7 +6,7 @@ services:
 
     agit.validator.multilang:
         parent: agit.validator
-        class: Agit\MultilangBundle\Plugin\MultilangStringValidator
+        class: Agit\MultilangBundle\Service\MultilangStringValidator
         arguments: [ "@agit.intl.locale", "@agit.validator.string", "@agit.validator.regex" ]
         tags: [{ name: agit.validator, id: multilang }]
 

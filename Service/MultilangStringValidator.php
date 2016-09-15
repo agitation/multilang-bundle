@@ -7,7 +7,7 @@
  * @license    http://opensource.org/licenses/MIT
  */
 
-namespace Agit\MultilangBundle\Plugin;
+namespace Agit\MultilangBundle\Service;
 
 use Agit\IntlBundle\Service\LocaleService;
 use Agit\IntlBundle\Tool\Translate;
