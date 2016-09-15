@@ -9,18 +9,18 @@
 
 namespace Agit\MultilangBundle\Service;
 
+use Twig_SimpleFunction;
 use Agit\MultilangBundle\Multilang;
 use Twig_Extension;
 use Twig_Function_Method;
 
 class MultilangTwigExtension extends Twig_Extension
 {
-    /**
-     * {@inheritdoc}
-     */
     public function getFunctions()
     {
-        return ["u"  => new Twig_Function_Method($this, "u",  ["is_safe" => ["all"]])];
+        return [
+            new Twig_SimpleFunction("u", [$this, "u"],  ["is_safe" => ["all"]])
+        ];
     }
 
     public function getName()
