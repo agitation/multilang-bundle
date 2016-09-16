@@ -21,7 +21,7 @@ class MultilangStringType extends StringType
         $this->init($value);
 
         if ($this->mustCheck()) {
-            static::$_ValidationService->validate(
+            static::$_validator->validate(
                 "multilang",
                 $value,
                 $this->minLength,
