@@ -3,15 +3,11 @@ msgstr ""
 "Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: @AgitMultilangBundle/Plugin/MultilangStringValidator.php:43
-#: @AgitMultilangBundle/Plugin/MultilangStringValidator.php:43
-#: @AgitMultilangBundle/Plugin/MultilangStringValidator.php:34
+#: @AgitMultilangBundle/Service/MultilangStringValidator.php:50
 msgid "The field must be translated into at least one language."
 msgstr ""
 
-#: @AgitMultilangBundle/Plugin/MultilangStringValidator.php:48
-#: @AgitMultilangBundle/Plugin/MultilangStringValidator.php:48
-#: @AgitMultilangBundle/Plugin/MultilangStringValidator.php:39
+#: @AgitMultilangBundle/Service/MultilangStringValidator.php:55
 #, php-format
 msgid "`%s` is not a valid language."
 msgstr ""
