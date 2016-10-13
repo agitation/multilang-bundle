@@ -11,3 +11,7 @@ msgstr ""
 #, php-format
 msgid "`%s` is not a valid language."
 msgstr ""
+
+#: @AgitMultilangBundle/Api/MultilangNameTrait.php
+msgid "Name"
+msgstr ""

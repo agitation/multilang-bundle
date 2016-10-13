@@ -11,3 +11,7 @@ msgstr "Das Feld muss in mindestens eine Sprache übersetzt werden."
 #, php-format
 msgid "`%s` is not a valid language."
 msgstr "`%s` ist keine gültige Sprache."
+
+#: @AgitMultilangBundle/Api/MultilangNameTrait.php
+msgid "Name"
+msgstr "Name"
