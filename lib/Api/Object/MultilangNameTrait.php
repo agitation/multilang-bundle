@@ -7,10 +7,11 @@
  * @license    http://opensource.org/licenses/MIT
  */
 
-namespace Agit\MultilangBundle\Api;
+namespace Agit\MultilangBundle\Api\Object;
 
 // Doctrine apparently needs the explicit import, so don't delete the following line.
 use Agit\ApiBundle\Annotation\Property;
+use Agit\MultilangBundle\Api\Annotation\MultilangStringType;
 
 trait MultilangNameTrait
 {

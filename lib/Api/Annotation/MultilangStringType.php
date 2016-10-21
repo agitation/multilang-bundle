@@ -7,7 +7,7 @@
  * @license    http://opensource.org/licenses/MIT
  */
 
-namespace Agit\MultilangBundle\Api;
+namespace Agit\MultilangBundle\Api\Annotation;
 
 use Agit\ApiBundle\Annotation\Property\StringType;
 
