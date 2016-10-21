@@ -8,6 +8,7 @@
  */
 
 namespace Agit\MultilangBundle\Seed;
+
 use Agit\BaseBundle\Exception\InternalErrorException;
 use Agit\IntlBundle\Service\LocaleService;
 
@@ -20,14 +21,14 @@ trait MultilangSeedTrait
     {
         $localeService = $this->getLocaleService();
 
-        if (! ($localeService instanceof LocaleService))
+        if (! ($localeService instanceof LocaleService)) {
             throw new InternalErrorException("This trait expects an instance of Agit\IntlBundle\Service\LocaleService.");
+        }
 
         $string = "";
         $oldLocale = $localeService->getLocale();
 
-        foreach ($localeService->getAvailableLocales() as $locale)
-        {
+        foreach ($localeService->getAvailableLocales() as $locale) {
             $localeService->setLocale($locale);
             $lang = substr($locale, 0, 2);
 

@@ -9,10 +9,9 @@
 
 namespace Agit\MultilangBundle\Service;
 
-use Twig_SimpleFunction;
 use Agit\MultilangBundle\Multilang;
 use Twig_Extension;
-use Twig_Function_Method;
+use Twig_SimpleFunction;
 
 class MultilangTwigExtension extends Twig_Extension
 {

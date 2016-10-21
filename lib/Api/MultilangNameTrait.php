@@ -10,7 +10,6 @@
 namespace Agit\MultilangBundle\Api;
 
 // Doctrine apparently needs the explicit import, so don't delete the following line.
-use Agit\MultilangBundle\Api\MultilangStringType;
 use Agit\ApiBundle\Annotation\Property;
 
 trait MultilangNameTrait
