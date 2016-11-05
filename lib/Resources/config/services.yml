@@ -1,4 +1,8 @@
 services:
+    agit.multilang:
+        class: Agit\MultilangBundle\Service\MultilangString
+        arguments: [ "@agit.intl.locale" ]
+
     agit.mlang.validator:
         class: Agit\MultilangBundle\EntityConstraint\MultilangValidator
         arguments: [ "@agit.validation" ]
