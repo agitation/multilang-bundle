@@ -23,15 +23,22 @@ class MultilangString
 
     public function t($string)
     {
-        return $this->getMultilangString(function() use ($string){
+        return $this->getMultilangString(function () use ($string) {
             return Translate::t($string);
         });
     }
 
     public function x($context, $string)
     {
-        return $this->getMultilangString(function() use ($context, $string){
+        return $this->getMultilangString(function () use ($context, $string) {
             return Translate::x($context, $string);
+        });
+    }
+
+    public function n($string1, $string2, $num)
+    {
+        return $this->getMultilangString(function () use ($string1, $string2, $num) {
+            return Translate::n($string1, $string2, $num);
         });
     }
 

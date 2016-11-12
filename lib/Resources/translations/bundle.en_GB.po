@@ -14,4 +14,4 @@ msgstr ""
 
 #: @AgitMultilangBundle/Api/Object/MultilangNameTrait.php
 msgid "Name"
-msgstr ""
+msgstr "Name"
