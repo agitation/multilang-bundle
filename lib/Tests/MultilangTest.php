@@ -50,7 +50,7 @@ class MultilangTest extends PHPUnit_Framework_TestCase
             ["[:de][:en]something", "de_DE", ""],
             ["[de]irgendwas[:en]something", "de_DE", "[de]irgendwas[:en]something"],
             ["[:de]irgendwas[:en]something", "fr_FR", "something"],
-            ["[:deirgendwas[:en]something", "en_GB", "[:deirgendwas[:en]something"],
+            ["[:deirgendwas[:en]something", "en_US", "[:deirgendwas[:en]something"],
             ["something", "de_DE", "something"],
         ];
     }
