@@ -1,25 +1,26 @@
-.multilang                                      { overflow: hidden; }
-.multilang textarea                             { vertical-align: top }
-.multilang .langs                               { display: inline-block; margin-left: 8px; position: relative; top: -1px; border-radius: 0 0 3px 3px; overflow: hidden; }
-.multilang .lang                                { display: inline-block; background: #bbb; color: #fff; text-align: center; padding: 0px 13px 3px; margin-left: 1px; float: left; overflow: hidden; }
-.multilang .lang:first-child                    { margin-left: 0; }
-.multilang .lang:hover, .multilang .lang:focus  { text-decoration: none; background: #aaa; }
+.multilang                                                          { overflow: hidden; }
+.multilang textarea                                                 { vertical-align: top }
+.multilang .langs                                                   { display: inline-block; margin-left: 8px; position: relative; top: -1px; border-radius: 0 0 3px 3px; overflow: hidden; }
+.multilang.single .langs                                            { display: none; }
+.multilang .lang                                                    { display: inline-block; background: #bbb; color: #fff; text-align: center; padding: 0px 13px 3px; margin-left: 1px; float: left; overflow: hidden; }
+.multilang .lang:first-child                                        { margin-left: 0; }
+.multilang .lang:hover, .multilang .lang:focus                      { text-decoration: none; background: #aaa; }
 
-.multilang .lang i.fa                           { display: block; visibility: hidden; margin: 0 auto 5px; line-height: 1px; font-size: 20px; }
+.multilang .lang i.fa                                               { display: block; visibility: hidden; margin: 0 auto 5px; line-height: 1px; font-size: 20px; }
 
-.multilang .lang.current                                    {  }
-.multilang .lang.current i.fa                               { visibility: visible; }
-.multilang .lang.hastext                                    { background: #555; }
-.multilang .lang.hastext:hover, .multilang .lang.hastext:focus  { background: #444; }
-.multilang .lang span                                       { min-width: 1.3em; }
+.multilang .lang.current                                            {  }
+.multilang .lang.current i.fa                                       { visibility: visible; }
+.multilang .lang.hastext                                            { background: #555; }
+.multilang .lang.hastext:hover, .multilang .lang.hastext:focus      { background: #444; }
+.multilang .lang span                                               { min-width: 1.3em; }
 
 
 
-.multilang .form-control:focus + .langs .lang               { background: #a3cae9 }
+.multilang .form-control:focus + .langs .lang                       { background: #a3cae9 }
 .multilang .form-control:focus + .langs .lang:hover,
-.multilang .form-control:focus + .langs .lang:focus         { background: #9ec8e9 }
+.multilang .form-control:focus + .langs .lang:focus                 { background: #9ec8e9 }
 
 
-.multilang .form-control:focus + .langs .lang.hastext       { background: #307cb7 }
+.multilang .form-control:focus + .langs .lang.hastext               { background: #307cb7 }
 .multilang .form-control:focus + .langs .lang.hastext:hover,
-.multilang .form-control:focus + .langs .lang.hastext:focus { background: #1f6ca7 }
+.multilang .form-control:focus + .langs .lang.hastext:focus         { background: #1f6ca7 }
