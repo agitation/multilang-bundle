@@ -47,7 +47,7 @@ class MultilangStringValidator extends AbstractValidator
         $parts = Multilang::multilangStringToArray($value);
 
         if (! count($parts) && $minLength) {
-            throw new InvalidValueException(Translate::t("The field must be translated into at least one language."));
+            throw new InvalidValueException(Translate::t("This field must not be empty."));
         }
 
         foreach ($parts as $lang => $string) {
