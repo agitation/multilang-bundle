@@ -4,7 +4,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: @AgitMultilangBundle/Service/MultilangStringValidator.php:50
-msgid "The field must be translated into at least one language."
+msgid "This field must not be empty."
 msgstr ""
 
 #: @AgitMultilangBundle/Service/MultilangStringValidator.php:55
