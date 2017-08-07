@@ -1,7 +1,7 @@
 .multilang                                                          { overflow: hidden; }
 .multilang textarea                                                 { vertical-align: top }
 .multilang .langs                                                   { display: inline-block; margin-left: 8px; position: relative; top: -1px; overflow: hidden; }
-.multilang.single .langs                                            { display: none; }
+.multilang.mono .langs                                              { display: none; }
 .multilang .lang                                                    { display: inline-block; background: #bbb; color: #fff; text-align: center; padding: 0px 13px 3px; margin-left: 1px; float: left; overflow: hidden; }
 .multilang .lang:first-child                                        { margin-left: 0; border-radius: 0 0 0 3px; }
 .multilang .lang:last-child                                         { border-radius: 0 0 3px 0; }
