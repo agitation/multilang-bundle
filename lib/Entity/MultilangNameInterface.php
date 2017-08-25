@@ -9,7 +9,9 @@
 
 namespace Agit\MultilangBundle\Entity;
 
-interface MultilangNameInterface
+use Agit\BaseBundle\Entity\NameInterface;
+
+interface MultilangNameInterface extends NameInterface
 {
     /**
      * @param string $name
