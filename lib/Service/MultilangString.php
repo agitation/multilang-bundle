@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 /*
  * @package    agitation/multilang-bundle
  * @link       http://github.com/agitation/multilang-bundle
@@ -44,10 +44,11 @@ class MultilangString
 
     public function getMultilangString($callback)
     {
-        $string = "";
+        $string = '';
         $oldLocale = $this->localeService->getLocale();
 
-        foreach ($this->localeService->getAvailableLocales() as $locale) {
+        foreach ($this->localeService->getAvailableLocales() as $locale)
+        {
             $this->localeService->setLocale($locale);
             $lang = substr($locale, 0, 2);
 

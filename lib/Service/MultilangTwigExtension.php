@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 /*
  * @package    agitation/multilang-bundle
  * @link       http://github.com/agitation/multilang-bundle
@@ -18,13 +18,13 @@ class MultilangTwigExtension extends Twig_Extension
     public function getFunctions()
     {
         return [
-            new Twig_SimpleFunction("u", [$this, "u"],  ["is_safe" => ["all"]])
+            new Twig_SimpleFunction('u', [$this, 'u'], ['is_safe' => ['all']])
         ];
     }
 
     public function getName()
     {
-        return "multilang";
+        return 'multilang';
     }
 
     public function u($string, $locale = null)

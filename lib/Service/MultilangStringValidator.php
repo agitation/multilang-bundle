@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 /*
  * @package    agitation/multilang-bundle
  * @link       http://github.com/agitation/multilang-bundle
@@ -35,27 +35,34 @@ class MultilangStringValidator extends AbstractValidator
     public function validate($value, $minLength = null, $maxLength = null, $allowLinebreaks = false)
     {
         // make sure there are no untranslated parts at the beginning, unless the string is entirely empty
-        if ($value !== "") {
+        if ($value !== '')
+        {
             $this->regexValidator->validate($value, "|^\[:[a-z]{2}\]|");
         }
 
         $availableLanguages = array_map(
-            function ($locale) { return substr($locale, 0, 2); },
+            function ($locale) {
+                return substr($locale, 0, 2);
+            },
             $this->localeService->getAvailableLocales()
         );
 
         $parts = Multilang::multilangStringToArray($value);
 
-        if (! count($parts) && $minLength) {
-            throw new InvalidValueException(Translate::t("This field must not be empty."));
+        if (! count($parts) && $minLength)
+        {
+            throw new InvalidValueException(Translate::t('This field must not be empty.'));
         }
 
-        foreach ($parts as $lang => $string) {
-            if (! in_array($lang, $availableLanguages)) {
-                throw new InvalidValueException(sprintf(Translate::t("`%s` is not a valid language."), $lang));
+        foreach ($parts as $lang => $string)
+        {
+            if (! in_array($lang, $availableLanguages))
+            {
+                throw new InvalidValueException(sprintf(Translate::t('`%s` is not a valid language.'), $lang));
             }
 
-            if ($string || $minLength) {
+            if ($string || $minLength)
+            {
                 $this->stringValidator->validate($string, $minLength, $maxLength, $allowLinebreaks);
             }
         }

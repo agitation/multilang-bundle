@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 /*
  * @package    agitation/multilang-bundle
  * @link       http://github.com/agitation/multilang-bundle
@@ -25,7 +25,7 @@ class MultilangValidator extends ConstraintValidator
     public function validate($value, Constraint $constraint)
     {
         return $this->validator->isValid(
-            "multilang",
+            'multilang',
             $value,
             $constraint->minLength,
             $constraint->maxLength,

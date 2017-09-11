@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 /*
  * @package    agitation/multilang-bundle
  * @link       http://github.com/agitation/multilang-bundle
@@ -27,6 +27,6 @@ class Multilang extends Constraint
 
     public function validatedBy()
     {
-        return "multilang";
+        return 'multilang';
     }
 }
