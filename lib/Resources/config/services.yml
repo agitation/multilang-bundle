@@ -17,3 +17,5 @@ services:
     agit.mlang.twig:
         class: Agit\MultilangBundle\Service\MultilangTwigExtension
         tags: [{ name: twig.extension }]
+
+    Agit\MultilangBundle\Service\MultilangString: "@agit.multilang"
