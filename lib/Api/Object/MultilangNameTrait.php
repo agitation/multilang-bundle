@@ -11,13 +11,11 @@ declare(strict_types=1);
 namespace Agit\MultilangBundle\Api\Object;
 
 // Doctrine apparently needs the explicit import, so don't delete the following line.
-use Agit\ApiBundle\Annotation\Property;
 use Agit\MultilangBundle\Api\Annotation\MultilangStringType;
 
 trait MultilangNameTrait
 {
     /**
-     * @Property\Name("Name")
      * @MultilangStringType(minLength=3, maxLength=50)
      */
     public $name;

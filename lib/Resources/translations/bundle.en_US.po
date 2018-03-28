@@ -3,11 +3,11 @@ msgstr ""
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: @AgitMultilangBundle/Service/MultilangStringValidator.php:50
+#: @AgitMultilangBundle/Service/MultilangStringValidator.php:55
 msgid "This field must not be empty."
 msgstr ""
 
-#: @AgitMultilangBundle/Service/MultilangStringValidator.php:55
+#: @AgitMultilangBundle/Service/MultilangStringValidator.php:62
 #, php-format
 msgid "`%s` is not a valid language."
 msgstr ""

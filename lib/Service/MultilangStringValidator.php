@@ -11,7 +11,6 @@ declare(strict_types=1);
 namespace Agit\MultilangBundle\Service;
 
 use Agit\IntlBundle\Service\LocaleService;
-use Agit\IntlBundle\Tool\Translate;
 use Agit\MultilangBundle\Multilang;
 use Agit\ValidationBundle\Exception\InvalidValueException;
 use Agit\ValidationBundle\Validator\AbstractValidator;
@@ -52,14 +51,14 @@ class MultilangStringValidator extends AbstractValidator
 
         if (! count($parts) && $minLength)
         {
-            throw new InvalidValueException(Translate::t('This field must not be empty.'));
+            throw new InvalidValueException('This field must not be empty.');
         }
 
         foreach ($parts as $lang => $string)
         {
             if (! in_array($lang, $availableLanguages))
             {
-                throw new InvalidValueException(sprintf(Translate::t('`%s` is not a valid language.'), $lang));
+                throw new InvalidValueException(sprintf('`%s` is not a valid language.', $lang));
             }
 
             if ($string || $minLength)
